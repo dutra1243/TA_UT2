@@ -4,4 +4,9 @@ function funcionDelLoro(string, cant) {
     }
 }
 
-funcionDelLoro("Hola", 5);
+function funcionDelLoroMejorada(string, cant) {
+    console.log((string + "\n").repeat(cant))
+}
+funcionDelLoro("Hola", 5)
+
+funcionDelLoroMejorada("tchau", 5)
