@@ -16,13 +16,13 @@ function generatePasswordAux(largo) {
     //     + caracteres[52]      0
     //     + caracteres[61]      9)
 
-    pass.splice(Math.random(), 0, caracteres[Math.floor(Math.random() * (25 - 0 + 1)) + 0]) // A-Z
-    pass.splice(Math.random(), 0, caracteres[Math.floor(Math.random() * (51 - 26 + 1)) + 26]) // a-z
-    pass.splice(Math.random(), 0, caracteres[Math.floor(Math.random() * (61 - 52 + 1)) + 52]) // 0-9
+    pass.splice(Math.floor(Math.random() * (pass.length - 0 + 1) + 0), 0, caracteres[Math.floor(Math.random() * (25 - 0 + 1)) + 0]) // A-Z
+    pass.splice(Math.floor(Math.random() * (pass.length - 0 + 1) + 0), 0, caracteres[Math.floor(Math.random() * (51 - 26 + 1)) + 26]) // a-z
+    pass.splice(Math.floor(Math.random() * (pass.length - 0 + 1) + 0), 0, caracteres[Math.floor(Math.random() * (61 - 52 + 1)) + 52]) // 0-9
     while (pass.length < largo) {
-        pass.splice(Math.random(), 0, caracteres[Math.floor(Math.random() * (61 - 0 + 1)) + 0])
+        pass.splice(Math.random() + Math.random(), 0, caracteres[Math.floor(Math.random() * (61 - 0 + 1)) + 0])
     }
     console.log(pass.join(''))
 }
 
-generatePassword(15)
+generatePasswordAux(15)
