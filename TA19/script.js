@@ -45,16 +45,6 @@ function validatePassword() {
         errPassw.appendChild(p)
         return false
     }
-    // if (passw.value === "") {
-    //     if (errPassw.lastChild.id === "error empty") {
-    //         return false
-    //     }
-    //     const p = document.createElement("p")
-    //     p.textContent = "*El campo no puede estar vacío"
-    //     p.id = "error empty"
-    //     errPassw.appendChild(p)
-    //     return false
-    // }
     for (const child of errPassw.children) {
         if (child.id.startsWith("error")) {
             errPassw.removeChild(child)
